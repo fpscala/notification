@@ -38,7 +38,7 @@ object Notification {
           .toVdomArray { case (toast, index) =>
             <.div(^.key := s"toast$index", notification, typeStyle(toast.`type`))(
              <.section(^.cls := "body")(
-               <.i(^.cls := "glyphicon " + toast.icon),
+               <.i(^.cls := "fa " + toast.icon),
                <.span(title)(toast.title),
                <.p(toast.message)))
           }.when(state.toasts.nonEmpty))
@@ -62,15 +62,15 @@ object Notification {
   def render(duration: Int = 6): Unmounted[Int, ToastState, Backend] = toastRef.component(duration)
 
   def warning(message: String): Callback =
-    toast(Warn, "glyphicon-exclamation-sign", message, "Notification")
+    toast(Warn, "fa-exclamation-circle", message, "Notification")
 
   def info(message: String): Callback =
-    toast(Info, "glyphicon-info-sign", message, "Information")
+    toast(Info, "fa-info-circle", message, "Information")
 
   def success(message: String): Callback =
-    toast(Success, "glyphicon-ok", message, "Successful")
+    toast(Success, "fa-check", message, "Successful")
 
   def error(message: String): Callback =
-    toast(Fail, "glyphicon-warning-sign", message, "Error")
+    toast(Fail, "fa-exclamation-triangle", message, "Error")
 
 }
