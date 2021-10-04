@@ -16,7 +16,7 @@ Usage
 4. Add Notification to your build sbt.
 
 ```scala
- libraryDependencies += "uz.scala" %%% "notification" % "2.0"
+ libraryDependencies += "uz.scala" %%% "notification" % "1.0"
 ```
 
 ### Using notification
@@ -58,3 +58,5 @@ Notification.error("This is error box!")
 
 Notification.success("This is success box!")
 ```
+
+For notification icons used glyphicon [Bootstrap 3](https://getbootstrap.com/docs/3.3/components/)
