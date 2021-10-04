@@ -1,12 +1,12 @@
 Notification alert for ScalaJs & React
-=========================
+======================================
 Usage
--------------
+-----
 
 ### Contents
 
 * [Setup](#setup)
-* [Using notification](#Using notification)
+* [Using notification](#using-notification)
 
 ### Setup
 
