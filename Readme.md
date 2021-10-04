@@ -58,3 +58,4 @@ Notification.error("This is error box!")
 
 Notification.success("This is success box!")
 ```
+For notification icons used [Font Awesome 5](https://fontawesome.com/v5.15/icons?d=gallery&p=2)
