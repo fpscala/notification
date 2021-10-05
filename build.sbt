@@ -50,9 +50,8 @@ lazy val core = project
     ),
     npmDependencies in Compile ++= Seq(
         "react" -> "17.0.2",
-        "react-dom" -> "17.0.2",
-        "react-bootstrap" -> "0.33.1"
-    ),
+        "react-dom" -> "17.0.2"
+    )
   )
   .enablePlugins(ScalaJSPlugin, ScalaJSBundlerPlugin)
 
