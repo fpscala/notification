@@ -11,7 +11,7 @@ lazy val notification = (project in file("."))
     crossScalaVersions := Nil
   ).aggregate(core, examples)
 
-ThisBuild / version := "2.0"
+ThisBuild / version := "2.0.1"
 ThisBuild / organization := "uz.scala"
 ThisBuild / publishMavenStyle := true
 ThisBuild / publishArtifact in Test := false
