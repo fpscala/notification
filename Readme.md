@@ -16,7 +16,7 @@ Usage
 4. Add Notification to your build sbt.
 
 ```scala
- libraryDependencies += "uz.scala" %%% "notification" % "2.0.1"
+ libraryDependencies += "uz.scala" %%% "notification" % "2.0.2"
 ```
 
 ### Using notification

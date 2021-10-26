@@ -11,7 +11,7 @@ lazy val notification = (project in file("."))
     crossScalaVersions := Nil
   ).aggregate(core, examples)
 
-ThisBuild / version := "2.0.1"
+ThisBuild / version := "2.0.2"
 ThisBuild / organization := "uz.scala"
 ThisBuild / publishMavenStyle := true
 ThisBuild / publishArtifact in Test := false
@@ -29,7 +29,7 @@ ThisBuild / scmInfo := Some(
     "scm:git:https://github.com/Prince951-17/notification.git"
   )
 )
-ThisBuild / licenses ++= Seq("Apache 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
+ThisBuild / licenses ++= Seq("Apache 2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0"))
 ThisBuild / homepage := Some(url("https://github.com/Prince951-17/notification"))
 ThisBuild / developers := List(
   Developer("Prince", "Maftunbek Raxmatov", "prince777_98@mail.ru", url("https://github.com/Prince951-17"))
@@ -44,8 +44,7 @@ lazy val core = project
     crossScalaVersions := supportedScalaVersions,
     resolvers += Resolver.sonatypeRepo("releases"),
     libraryDependencies ++= Seq(
-      "org.scala-js" %%% "scalajs-dom" % "1.2.0",
-      "com.github.japgolly.scalajs-react" %%% "core" % "1.7.7",
+      "com.github.japgolly.scalajs-react" %%% "core" % "2.0.0-RC3",
       "com.github.japgolly.scalacss" %%% "ext-react" % "0.7.0"
     ),
     npmDependencies in Compile ++= Seq(
@@ -53,7 +52,7 @@ lazy val core = project
         "react-dom" -> "17.0.2"
     )
   )
-  .enablePlugins(ScalaJSPlugin, ScalaJSBundlerPlugin)
+  .enablePlugins(ScalaJSBundlerPlugin)
 
 lazy val examples = project
   .in(file("examples"))
@@ -64,7 +63,7 @@ lazy val examples = project
     publish / skip := true,
     crossScalaVersions := supportedScalaVersions
   ).dependsOn(core)
-  .enablePlugins(ScalaJSPlugin, ScalaJSWeb, ScalaJSBundlerPlugin)
+  .enablePlugins(ScalaJSBundlerPlugin)
 
 
 lazy val compilerOptions =

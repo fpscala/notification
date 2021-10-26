@@ -54,9 +54,9 @@ object Notification {
   private val toastRef = Ref.toScalaComponent(component)
 
   private def toast(`type`: NotificationType, icon: String, message: String, title: String): CallbackTo[Unit] =
-    toastRef.get
+    toastRef
       .map(_.backend.toastMsg(`type`, icon, message, title))
-      .getOrElse(Callback.empty)
+      .get.map(_.getOrElse(Callback.empty))
       .flatten
 
   def render(duration: Int = 6): Unmounted[Int, ToastState, Backend] = toastRef.component(duration)
